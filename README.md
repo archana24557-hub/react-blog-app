@@ -1,12 +1,14 @@
 # 📝 Personal Blog Website (ReactJS)
 
 ## 🔹 Project Overview
+
 This is a personal blog website built using **ReactJS** where users can create, read, update, and delete blog posts.  
 The project is completely **frontend-based** and uses **localStorage** for data persistence.
 
 ---
 
 ## 🚀 Features
+
 - Create blog posts
 - View all blogs in card format
 - Read full blog details
@@ -19,6 +21,7 @@ The project is completely **frontend-based** and uses **localStorage** for data 
 ---
 
 ## 🛠 Tech Stack
+
 - ReactJS
 - JavaScript (ES6)
 - HTML5
@@ -29,71 +32,17 @@ The project is completely **frontend-based** and uses **localStorage** for data 
 
 ---
 
-## 📂 Folder Structure
 # 📝 Personal Blog Website (ReactJS)
 
 ## 🔹 Project Overview
+
 This is a personal blog website built using **ReactJS** where users can create, read, update, and delete blog posts.  
 The project is completely **frontend-based** and uses **localStorage** for data persistence.
 
 ---
 
-## 🚀 Features
-- Create blog posts
-- View all blogs in card format
-- Read full blog details
-- Edit existing blogs
-- Delete blogs with confirmation
-- Search blogs by title
-- Responsive UI using Bootstrap
-- Data persistence using localStorage
-
----
-
-## 🛠 Tech Stack
-- ReactJS
-- JavaScript (ES6)
-- HTML5
-- CSS3
-- Bootstrap
-- React Router DOM
-- LocalStorage
-
----
-
 ## 📂 Folder Structure
-# 📝 Personal Blog Website (ReactJS)
 
-## 🔹 Project Overview
-This is a personal blog website built using **ReactJS** where users can create, read, update, and delete blog posts.  
-The project is completely **frontend-based** and uses **localStorage** for data persistence.
-
----
-
-## 🚀 Features
-- Create blog posts
-- View all blogs in card format
-- Read full blog details
-- Edit existing blogs
-- Delete blogs with confirmation
-- Search blogs by title
-- Responsive UI using Bootstrap
-- Data persistence using localStorage
-
----
-
-## 🛠 Tech Stack
-- ReactJS
-- JavaScript (ES6)
-- HTML5
-- CSS3
-- Bootstrap
-- React Router DOM
-- LocalStorage
-
----
-
-## 📂 Folder Structure
 src/
 ├─ components/
 │ ├─ Navbar.jsx
@@ -117,10 +66,10 @@ src/
 ├─ App.jsx
 └─ index.js
 
-
 ---
 
 ## 🔀 Routing
+
 - `/` → Home Page
 - `/blogs` → Blog Listing Page
 - `/blogs/:id` → Blog Details Page
@@ -131,6 +80,7 @@ src/
 ---
 
 ## 💾 Data Management
+
 - All blogs are stored in **localStorage**
 - Data remains even after page refresh
 - CRUD operations update localStorage in real time
@@ -138,6 +88,7 @@ src/
 ---
 
 ## ▶️ How to Run the Project
+
 ```bash
 npm install
 npm start
@@ -159,4 +110,5 @@ Real-world project structure
 👨‍💻 Author
 
 Archana Kumari
-© 2026 TechGlaz Lab 
+© 2026 TechGlaz Lab
+```
