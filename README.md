@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# 📝 Personal Blog Website (ReactJS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔹 Project Overview
+This is a personal blog website built using **ReactJS** where users can create, read, update, and delete blog posts.  
+The project is completely **frontend-based** and uses **localStorage** for data persistence.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
+- Create blog posts
+- View all blogs in card format
+- Read full blog details
+- Edit existing blogs
+- Delete blogs with confirmation
+- Search blogs by title
+- Responsive UI using Bootstrap
+- Data persistence using localStorage
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Tech Stack
+- ReactJS
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- Bootstrap
+- React Router DOM
+- LocalStorage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📂 Folder Structure
+# 📝 Personal Blog Website (ReactJS)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔹 Project Overview
+This is a personal blog website built using **ReactJS** where users can create, read, update, and delete blog posts.  
+The project is completely **frontend-based** and uses **localStorage** for data persistence.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Features
+- Create blog posts
+- View all blogs in card format
+- Read full blog details
+- Edit existing blogs
+- Delete blogs with confirmation
+- Search blogs by title
+- Responsive UI using Bootstrap
+- Data persistence using localStorage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Tech Stack
+- ReactJS
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- Bootstrap
+- React Router DOM
+- LocalStorage
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📂 Folder Structure
+# 📝 Personal Blog Website (ReactJS)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔹 Project Overview
+This is a personal blog website built using **ReactJS** where users can create, read, update, and delete blog posts.  
+The project is completely **frontend-based** and uses **localStorage** for data persistence.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Features
+- Create blog posts
+- View all blogs in card format
+- Read full blog details
+- Edit existing blogs
+- Delete blogs with confirmation
+- Search blogs by title
+- Responsive UI using Bootstrap
+- Data persistence using localStorage
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠 Tech Stack
+- ReactJS
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- Bootstrap
+- React Router DOM
+- LocalStorage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📂 Folder Structure
+src/
+├─ components/
+│ ├─ Navbar.jsx
+│ ├─ Footer.jsx
+│ └─ BlogCard.jsx
+│
+├─ pages/
+│ ├─ Home.jsx
+│ ├─ Blogs.jsx
+│ ├─ BlogDetails.jsx
+│ ├─ CreateBlog.jsx
+│ ├─ EditBlog.jsx
+│ └─ About.jsx
+│
+├─ utils/
+│ └─ localStorage.js
+│
+├─ data/
+│ └─ blogData.js
+│
+├─ App.jsx
+└─ index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔀 Routing
+- `/` → Home Page
+- `/blogs` → Blog Listing Page
+- `/blogs/:id` → Blog Details Page
+- `/create` → Create Blog Page
+- `/edit/:id` → Edit Blog Page
+- `/about` → About Page
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💾 Data Management
+- All blogs are stored in **localStorage**
+- Data remains even after page refresh
+- CRUD operations update localStorage in real time
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ▶️ How to Run the Project
+```bash
+npm install
+npm start
 
-### Deployment
+🎯 Learning Outcome
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+React components & props
 
-### `npm run build` fails to minify
+React Router & dynamic routes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+State management
+
+Form handling & validation
+
+CRUD operations
+
+Real-world project structure
+
+👨‍💻 Author
+
+Archana Kumari
+© 2026 TechGlaz Lab 
