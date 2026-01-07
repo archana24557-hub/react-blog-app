@@ -86,9 +86,11 @@ src/
 - CRUD operations update localStorage in real time
 
 ---
-## 🔗 Project Links
-- GitHub Repository: https://github.com/archana24557-hub/react-blog-app
 
+## 🔗 Project Links
+
+- GitHub Repository: https://github.com/archana24557-hub/react-blog-app
+- Live Demo: https://archana24557-hub.github.io/react-blog-app
 
 ## ▶️ How to Run the Project
 
