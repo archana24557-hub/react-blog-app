@@ -1,21 +1,19 @@
 const blogData = [
     {
         id: 1,
-        title: "Learning React Basics",
-        description: "Introduction to React concepts",
-        content: "React is a JavaScript library for building user interfaces...",
-        category: "Tech",
-        author: "Archana",
-        date: "2026-01-10"
+        title: "React 19 Hooks Guide",
+        description: "React 19 introduces new hooks...",
+        category: "TECH",
+        date: "Jan 12, 2026",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
     },
     {
         id: 2,
-        title: "My Study Routine",
-        description: "How I manage my daily study schedule",
-        content: "A proper routine helps in staying consistent...",
-        category: "Education",
-        author: "Archana",
-        date: "2026-01-11"
+        title: "My Morning Rituals",
+        description: "Every morning I start my day...",
+        category: "PERSONAL",
+        date: "Jan 11, 2026",
+        image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe"
     }
 ];
 

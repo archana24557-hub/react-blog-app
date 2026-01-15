@@ -67,7 +67,6 @@ src/
 └─ index.js
 
 ---
-
 ## 🔀 Routing
 
 - `/` → Home Page
