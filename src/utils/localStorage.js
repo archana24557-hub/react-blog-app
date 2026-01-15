@@ -10,3 +10,6 @@ export const getBlogs = () => {
 export const saveBlogs = (blogs) => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(blogs));
 };
+if (!localStorage.getItem("blogs")) {
+    localStorage.setItem("blogs", JSON.stringify(blogData));
+}
