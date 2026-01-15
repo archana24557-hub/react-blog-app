@@ -8,7 +8,7 @@ export default function Home() {
         <div className="container mt-4">
 
             {/* HERO SECTION */}
-            <div className="hero-section mb-5 text-white p-5 rounded">
+            <div className="hero-section text-white p-5 rounded mb-5">
                 <h1 className="fw-bold display-5">
                     Upgrade Your Mind with Tech ✨
                 </h1>

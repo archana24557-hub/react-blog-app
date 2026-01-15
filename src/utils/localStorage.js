@@ -1,15 +1,10 @@
-const STORAGE_KEY = "blogs";
+import blogData from "../data/blogData";
 
-// Get blogs from localStorage
 export const getBlogs = () => {
-    const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
+    const data = localStorage.getItem("blogs");
+    return data ? JSON.parse(data) : blogData;
 };
 
-// Save blogs to localStorage
 export const saveBlogs = (blogs) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(blogs));
+    localStorage.setItem("blogs", JSON.stringify(blogs));
 };
-if (!localStorage.getItem("blogs")) {
-    localStorage.setItem("blogs", JSON.stringify(blogData));
-}
