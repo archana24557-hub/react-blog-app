@@ -6,21 +6,34 @@ export default function Home() {
 
     return (
         <div className="container mt-4">
-            <div className="bg-primary text-white p-5 rounded mb-4">
-                <h1 className="fw-bold">Welcome to TechGlaz Lab ✨</h1>
-                <p className="mt-2">
-                    A place where I share blogs on Tech, Education & Learning
+
+            {/* HERO SECTION */}
+            <div className="hero-section mb-5 text-white p-5 rounded">
+                <h1 className="fw-bold display-5">
+                    Upgrade Your Mind with Tech ✨
+                </h1>
+                <p className="mt-3 fs-5">
+                    Read, Write & Share Knowledge on Technology & Learning
                 </p>
+                <a href="#/blogs" className="btn btn-warning mt-3 px-4 py-2 fw-bold">
+                    Explore Blogs
+                </a>
             </div>
 
-            <h3 className="mb-3">Latest Blogs</h3>
+            {/* LATEST BLOGS */}
+            <div className="d-flex justify-content-between align-items-center mb-3">
+                <h3 className="fw-bold">Latest Blogs</h3>
+                <a href="#/blogs" className="text-decoration-none fw-bold">
+                    View All →
+                </a>
+            </div>
 
             {blogs.length === 0 ? (
                 <p>No blogs yet.</p>
             ) : (
                 <div className="row">
                     {blogs.map(blog => (
-                        <div className="col-md-4 mb-3" key={blog.id}>
+                        <div className="col-md-4 mb-4" key={blog.id}>
                             <BlogCard blog={blog} />
                         </div>
                     ))}
