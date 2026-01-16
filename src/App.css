@@ -11,41 +11,49 @@ body {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #050b1f, #0a0f2d);
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #1a237e, #000000);
+    color: #e0e0e0;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
 .navbar {
     position: sticky;
     top: 0;
-    background: #0a0f2d;
+    background: rgba(10, 15, 45, 0.85);
+    backdrop-filter: blur(10px);
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
     margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    color: #6ea8ff;
-    font-size: 24px;
+    color: #00d4ff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .menu-icon {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
 .bar {
-    width: 25px;
+    width: 28px;
     height: 3px;
-    background-color: white;
+    background-color: #00d4ff;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
 .nav-links {
@@ -54,61 +62,190 @@ body {
 }
 
 .nav-links a {
-    margin-left: 20px;
+    margin-left: 30px;
     text-decoration: none;
-    color: white;
+    color: #e0e0e0;
     font-weight: 500;
-    transition: color 0.3s;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-links a:hover {
-    color: #6ea8ff;
+    color: #00d4ff;
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
 }
 
 /* HERO */
 .hero-section {
     text-align: center;
-    padding: 100px 20px;
-    margin-top: 30px;
+    padding: 120px 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 212, 255, 0.05) 100%);
 }
 
 .hero-section h1 {
-    font-size: 48px;
-    color: #6ea8ff;
-    margin-bottom: 15px;
+    font-size: 64px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00d4ff, #9b6bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
 .hero-section p {
-    font-size: 18px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-section button {
-    padding: 12px 30px;
-    border-radius: 30px;
+    padding: 14px 35px;
+    border-radius: 50px;
     border: none;
-    background: linear-gradient(90deg, #5f9cff, #9b6bff);
+    background: linear-gradient(90deg, #00d4ff, #005bea);
     color: white;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
 }
 
 .hero-section button:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.7);
 }
 
 /* BLOGS */
 .latest-title {
     margin-left: 40px;
     margin-top: 40px;
+    font-size: 32px;
+    color: #ffffff;
+    border-left: 5px solid #00d4ff;
+    padding-left: 15px;
 }
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Card Styling (Assuming BlogCard uses .card class) */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(0, 212, 255, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card-body p {
+    color: #b0b0b0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-body .btn {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #00d4ff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.card-body .btn:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00d4ff;
+}
+
+/* FOOTER */
+.footer-container {
+    background: #080c24;
+    color: #b0b0b0;
+    padding: 60px 40px 20px;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background: #00d4ff;
+    border-radius: 2px;
+}
+
+.social-links a {
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links a:hover {
+    background: #00d4ff;
+    border-color: #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
 /* RESPONSIVE DESIGN */
@@ -123,39 +260,27 @@ body {
 
     .nav-links {
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 0;
         width: 100%;
-        background-color: #0a0f2d;
+        background-color: rgba(10, 15, 45, 0.95);
+        backdrop-filter: blur(15px);
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
+        padding: 30px 0;
         display: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-links.active {
         display: flex;
-        border-bottom: 1px solid #1a2342;
-    }
-
-    .nav-links a {
-        margin: 15px 0;
-        font-size: 18px;
-    }
-
-    .hero-section {
-        padding: 60px 20px;
     }
 
     .hero-section h1 {
-        font-size: 32px;
+        font-size: 42px;
     }
 
     .blog-grid {
         padding: 20px;
-    }
-
-    .latest-title {
-        margin-left: 20px;
     }
 }
