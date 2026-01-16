@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import "../../App.css"; // Ensure CSS is available if not globally imported
+
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
