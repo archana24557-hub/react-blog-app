@@ -1,116 +1,150 @@
-.home-container {
-    padding: 20px;
-    background: #0b1020;
-    min-height: 100vh;
-}
-
-.hero {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #050b1f, #0a0f2d);
     color: white;
-    padding: 40px 20px;
-    border-radius: 16px;
-    text-align: center;
-    margin-bottom: 30px;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    opacity: 0.8;
-}
-
-.filters {
-    margin-top: 20px;
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #0a0f2d;
+    padding: 15px 40px;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    margin-bottom: 40px;
 }
 
-.filters button {
-    background: #1e40af;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
+.logo {
+    color: #6ea8ff;
+    font-size: 24px;
+}
+
+.menu-icon {
+    display: none;
     cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.filters button:hover {
-    background: #2563eb;
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6ea8ff;
+}
+
+/* HERO */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 30px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    color: #6ea8ff;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-section button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(90deg, #5f9cff, #9b6bff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.hero-section button:hover {
+    transform: scale(1.05);
+}
+
+/* BLOGS */
+.latest-title {
+    margin-left: 40px;
+    margin-top: 40px;
 }
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    padding: 20px 40px;
 }
 
-.blog-card {
-    background: #111827;
-    color: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
 
-.blog-card:hover {
-    transform: translateY(-5px);
-}
+    .menu-icon {
+        display: flex;
+    }
 
-.blog-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #0a0f2d;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none;
+    }
 
-.blog-card h3 {
-    padding: 10px 15px;
-    font-size: 18px;
-}
+    .nav-links.active {
+        display: flex;
+        border-bottom: 1px solid #1a2342;
+    }
 
-.blog-card p {
-    padding: 0 15px;
-    font-size: 14px;
-    opacity: 0.8;
-}
+    .nav-links a {
+        margin: 15px 0;
+        font-size: 18px;
+    }
 
-.blog-card small {
-    padding: 15px;
-    display: block;
-    opacity: 0.6;
-}
+    .hero-section {
+        padding: 60px 20px;
+    }
 
-.category {
-    background: #2563eb;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    margin: 10px;
-    display: inline-block;
-}
+    .hero-section h1 {
+        font-size: 32px;
+    }
 
-.blog-card {
-    background: #111827;
-    color: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
+    .blog-grid {
+        padding: 20px;
+    }
 
-.blog-card:hover {
-    transform: translateY(-6px);
-}
-
-.blog-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+    .latest-title {
+        margin-left: 20px;
+    }
 }

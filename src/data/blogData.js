@@ -1,51 +1,22 @@
-import blogImages from "./blogImages";
-
 const blogData = [
     {
         id: 1,
-        title: "React 19 Hooks Guide",
-        description:
-            "React 19 has introduced powerful new hooks that simplify state management and performance optimization.",
-        category: "TECH",
-        date: "Jan 12, 2026",
-        image: blogImages.tech,
+        title: "Healthy Lifestyle",
+        description: "Healthy lifestyle includes good food, exercise and positive thinking.",
+        image: "https://images.unsplash.com/photo-1542736667-069246bdbc6d"
     },
     {
         id: 2,
-        title: "My Morning Rituals",
-        description:
-            "Every morning I start my day with meditation, warm water, and focused planning for a productive lifestyle.",
-        category: "PERSONAL",
-        date: "Jan 11, 2026",
-        image: blogImages.personal,
+        title: "Web Development",
+        description: "Web development is the work involved in building websites and web apps.",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
     },
     {
         id: 3,
-        title: "AI in Web Development",
-        description:
-            "AI is transforming web development through automation, smart code suggestions, and testing tools.",
-        category: "TECH",
-        date: "Jan 10, 2026",
-        image: blogImages.tech,
-    },
-    {
-        id: 4,
-        title: "Digital Nomad Life",
-        description:
-            "Working remotely while traveling the world is exciting but requires discipline and planning.",
-        category: "LIFESTYLE",
-        date: "Jan 9, 2026",
-        image: blogImages.lifestyle,
-    },
-    {
-        id: 5,
-        title: "Healthy Eating Habits",
-        description:
-            "Simple food choices can improve energy, focus, and overall mental health.",
-        category: "LIFESTYLE",
-        date: "Jan 8, 2026",
-        image: blogImages.lifestyle,
-    },
+        title: "Tech Growth",
+        description: "Technology is growing fast and changing the world.",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+    }
 ];
 
 export default blogData;

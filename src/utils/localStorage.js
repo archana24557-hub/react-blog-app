@@ -8,3 +8,4 @@ export const getBlogs = () => {
 export const saveBlogs = (blogs) => {
     localStorage.setItem("blogs", JSON.stringify(blogs));
 };
+

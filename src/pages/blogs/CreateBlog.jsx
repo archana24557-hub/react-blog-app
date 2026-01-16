@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getBlogs, saveBlogs } from "../utils/localStorage";
+import { getBlogs, saveBlogs } from "../../utils/localStorage";
 
 export default function CreateBlog() {
     const navigate = useNavigate();

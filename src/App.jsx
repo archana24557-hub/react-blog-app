@@ -1,12 +1,13 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import "./App.css";
+import Navbar from "./components/Layout/Navbar";
+import Footer from "./components/Layout/Footer";
 
 import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import BlogDetails from "./pages/BlogDetails";
-import CreateBlog from "./pages/CreateBlog";
-import EditBlog from "./pages/EditBlog";
+import Blogs from "./pages/blogs/Blogs";
+import BlogDetails from "./pages/blogs/BlogDetails";
+import CreateBlog from "./pages/blogs/CreateBlog";
+import EditBlog from "./pages/blogs/EditBlog";
 import About from "./pages/About";
 
 function App() {
