@@ -328,3 +328,121 @@ body {
         padding: 40px 20px 20px;
     }
 }
+
+/* ABOUT PAGE */
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h1 {
+    font-size: 48px;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 20px;
+    color: #666;
+}
+
+.about-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.bio h2 {
+    color: #1a237e;
+    margin-bottom: 15px;
+}
+
+.bio p {
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background: #f8f9fa;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.skill-card:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* NAVBAR LINKS STYLING */
+.nav-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+
+    /* Requested Style: Border, Padding, Margin */
+    border: 2px solid transparent;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin: 0 5px;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+    border-color: #007bff;
+    background-color: rgba(0, 123, 255, 0.05);
+}
