@@ -1,9 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { } from "react-router-dom";
 import BlogCard from "../components/UI/BlogCard";
 import { getBlogs } from "../utils/localStorage";
 
 export default function Home() {
-    const navigate = useNavigate();
     const blogs = getBlogs();
     const bestBlogs = blogs.slice(0, 5); // Select top 5 for "Best Blogs"
 
