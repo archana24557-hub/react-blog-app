@@ -3,6 +3,6 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #050b1f;
-    /* Fallback */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

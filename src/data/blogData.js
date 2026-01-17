@@ -1,3 +1,5 @@
+import vlogImage1 from "../assets/vlog-image-1.png";
+
 const blogData = [
     {
         id: 1,
@@ -89,6 +91,26 @@ const blogData = [
         description: "Simple techniques to reduce stress and find inner peace.",
         image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
         category: "Lifestyle"
+    },
+    {
+        id: 14,
+        title: "My First Vlog",
+        description: "Join me on a visual journey through my daily life and adventures! Captured moments from the city, nature, and everything in between.",
+        image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4",
+        images: [
+            vlogImage1,
+            "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4",
+            "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4",
+            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+            "https://images.unsplash.com/photo-1534067783741-512d69f500dc",
+            "https://images.unsplash.com/photo-1501504905252-473c47e087f8",
+            "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20",
+            "https://images.unsplash.com/photo-1469334031218-e382a71b716b",
+            "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8",
+            "https://images.unsplash.com/photo-1504198458649-3128b932f49e"
+        ],
+        category: "Vlog"
     }
 ];
 

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { useTheme } from "../../context/ThemeContext";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { theme, toggleTheme } = useTheme();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -24,6 +25,13 @@ export default function Navbar() {
                 <Link to="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
                 <Link to="/create" onClick={() => setIsOpen(false)}>Create</Link>
                 <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+                <button
+                    className="theme-toggle-btn"
+                    onClick={toggleTheme}
+                    title="Toggle Theme"
+                >
+                    {theme === 'light' ? '🌙' : '☀️'}
+                </button>
             </div>
         </nav>
     );

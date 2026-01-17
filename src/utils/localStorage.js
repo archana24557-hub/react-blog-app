@@ -9,3 +9,14 @@ export const saveBlogs = (blogs) => {
     localStorage.setItem("blogs", JSON.stringify(blogs));
 };
 
+export const updateBlog = (id, updates) => {
+    const blogs = getBlogs();
+    const index = blogs.findIndex((b) => b.id === Number(id));
+    if (index !== -1) {
+        blogs[index] = { ...blogs[index], ...updates };
+        saveBlogs(blogs);
+        return blogs[index];
+    }
+    return null;
+};
+

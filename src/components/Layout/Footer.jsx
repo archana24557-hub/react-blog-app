@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
         <footer className="footer-container">
@@ -12,10 +14,10 @@ export default function Footer() {
                 <div className="footer-section links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#/">Home</a></li>
-                        <li><a href="#/blogs">Blogs</a></li>
-                        <li><a href="#/about">About</a></li>
-                        <li><a href="#/create">Write a Blog</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/blogs">Blogs</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/create">Write a Blog</Link></li>
                     </ul>
                 </div>
                 <div className="footer-section social">
