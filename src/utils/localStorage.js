@@ -20,3 +20,9 @@ export const updateBlog = (id, updates) => {
     return null;
 };
 
+export const deleteBlog = (id) => {
+    const blogs = getBlogs();
+    const updatedBlogs = blogs.filter((b) => b.id !== Number(id));
+    saveBlogs(updatedBlogs);
+};
+

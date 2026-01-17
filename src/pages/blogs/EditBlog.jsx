@@ -1,56 +1,124 @@
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getBlogs, updateBlog } from "../../utils/localStorage";
 
+export default function EditBlog() {
+    const { id } = useParams();
+    const navigate = useNavigate();
 
-const blogs = [
-    {
-        id: 1,
-        title: "Future of AI",
-        desc: "How artificial intelligence is changing our daily life.",
-        img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485",
-    },
-    {
-        id: 2,
-        title: "Healthy Lifestyle",
-        desc: "Simple habits for a better and healthier life.",
-        img: "https://images.unsplash.com/photo-1540206395-68808572332f",
-    },
-    {
-        id: 3,
-        title: "Web Development",
-        desc: "Modern tools and trends for building websites.",
-        img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    },
-];
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [content, setContent] = useState("");
+    const [image, setImage] = useState("");
+    const [category, setCategory] = useState("Tech");
 
-export default function Home() {
+    useEffect(() => {
+        const blogs = getBlogs();
+        const blog = blogs.find((b) => b.id === Number(id));
+
+        if (blog) {
+            setTitle(blog.title);
+            setDescription(blog.description);
+            setContent(blog.content || "");
+            setImage(blog.image || "");
+            setCategory(blog.category);
+        } else {
+            alert("Blog not found!");
+            navigate("/blogs");
+        }
+    }, [id, navigate]);
+
+    const handleUpdate = (e) => {
+        e.preventDefault();
+
+        if (!title || !description) {
+            alert("Title and Description are required");
+            return;
+        }
+
+        updateBlog(id, {
+            title,
+            description,
+            content,
+            image,
+            category
+        });
+
+        alert("Blog updated successfully!");
+        navigate(`/blogs/${id}`);
+    };
+
     return (
-        <>
-            <div className="hero glass">
-                <h1>NEXORA</h1>
-                <p>Where Thoughts Meet Technology</p>
-                <button>Explore Blogs</button>
-            </div>
+        <div className="container mt-4 mb-5">
+            <h2 className="mb-4">Edit Blog</h2>
 
-            <div className="category-bar">
-                <span>#Tech</span>
-                <span>#Lifestyle</span>
-                <span>#Personal</span>
-                <span>#Growth</span>
-            </div>
+            <form onSubmit={handleUpdate} className="card p-4 shadow-sm">
+                <div className="mb-3">
+                    <label className="form-label">Blog Title</label>
+                    <input
+                        className="form-control"
+                        placeholder="Blog Title"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                    />
+                </div>
 
-            <div className="blog-grid">
-                {blogs.map(blog => (
-                    <div key={blog.id} className="glass blog-card">
-                        <img src={blog.img} alt={blog.title} />
-                        <h3>{blog.title}</h3>
-                        <p>{blog.desc}</p>
-                    </div>
-                ))}
-            </div>
+                <div className="mb-3">
+                    <label className="form-label">Short Description</label>
+                    <input
+                        className="form-control"
+                        placeholder="Short Description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                    />
+                </div>
 
-            <div className="footer">
-                © 2026 NEXORA — Designed by You
-            </div>
-        </>
+                <div className="mb-3">
+                    <label className="form-label">Image URL</label>
+                    <input
+                        className="form-control"
+                        placeholder="Image URL"
+                        value={image}
+                        onChange={(e) => setImage(e.target.value)}
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label">Category</label>
+                    <select
+                        className="form-select"
+                        value={category}
+                        onChange={(e) => setCategory(e.target.value)}
+                    >
+                        <option>Tech</option>
+                        <option>Education</option>
+                        <option>Lifestyle</option>
+                        <option>Vlog</option>
+                    </select>
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label">Content</label>
+                    <textarea
+                        className="form-control"
+                        rows="6"
+                        placeholder="Full Blog Content"
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                    />
+                </div>
+
+                <div className="d-flex gap-2">
+                    <button type="submit" className="btn btn-success">Save Changes</button>
+                    <button
+                        type="button"
+                        className="btn btn-secondary"
+                        onClick={() => navigate(`/blogs/${id}`)}
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
     );
 }
-

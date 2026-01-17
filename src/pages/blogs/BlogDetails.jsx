@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getBlogs, updateBlog } from "../../utils/localStorage";
+import { getBlogs, updateBlog, deleteBlog } from "../../utils/localStorage";
 
 export default function BlogDetails() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [blog, setBlog] = useState(null);
     const [commentText, setCommentText] = useState("");
 
@@ -17,6 +18,13 @@ export default function BlogDetails() {
         if (blog) {
             const updatedBlog = updateBlog(blog.id, { likes: (blog.likes || 0) + 1 });
             setBlog(updatedBlog);
+        }
+    };
+
+    const handleDelete = () => {
+        if (window.confirm("Are you sure you want to delete this blog?")) {
+            deleteBlog(blog.id);
+            navigate("/blogs");
         }
     };
 
@@ -42,7 +50,13 @@ export default function BlogDetails() {
         <div className="container mt-4 mb-5">
             <div className="row justify-content-center">
                 <div className="col-lg-8">
-                    <h1 className="mb-3">{blog.title}</h1>
+                    <div className="d-flex justify-content-between align-items-center mb-3">
+                        <h1 className="mb-0">{blog.title}</h1>
+                        <div className="d-flex gap-2">
+                            <Link to={`/edit/${blog.id}`} className="btn btn-warning btn-sm">Edit</Link>
+                            <button onClick={handleDelete} className="btn btn-danger btn-sm">Delete</button>
+                        </div>
+                    </div>
 
                     {blog.images && blog.images.length > 0 ? (
                         <div className="row mb-4">
